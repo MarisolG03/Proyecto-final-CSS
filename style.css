@@ -1,0 +1,151 @@
+
+    /* font-family: "Victor Mono", monospace;
+    font-family: "Roboto Mono", monospace; */
+
+/* NORMALIZACION */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*esto mantiene el ancho y el alto a pesar del padding y el bordes*/
+    font-family: "Roboto Mono", monospace;
+    list-style: none; /*quita los puntos y decoración de las listas*/
+    text-decoration: none; /*esto quita el subrayado de los enlaces*/
+    color: white;
+}
+
+body{
+    background-color: black; /*TODO borrar cuando tengamos el fondo final*/
+}
+
+header{
+    position: fixed; /*Esto hace que el header se quede fijo en la parte superior*/
+    right: 0;
+    top: 0;
+    z-index: 100; /*Esto hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex; /*Esto hace que el header se muestre por encima*/
+    align-items: center; /*centra verticalmente*/
+    justify-content: space-between; /*que los elementos se separen*/
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 30px;
+    font-weight: light 300; /*este es el grueso de las letras*/
+}
+
+.navlist{
+    display: flex; /*esto sirve para que los elementos de la lista UL se pongan en línea*/
+
+}
+
+.navlist a{
+    margin-left: 60px; /*esto es para separar las palabras*/
+    font-size: 15px;
+    font-weight: 60px;
+    border-bottom: 2px solid transparent; /*este es un subrayado transparente*/
+    transition: all .5s ease;/* esto es para animar (transicionar) todas las caracterísitcas del .navlist a*/
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid white; /*es un subrayado blanco que aparecerá cuando estemos sobre el texto*/
+}
+
+ #menu-icon{
+    display: none; /*está en none para que lólo se vea cuando la página esté colapsada de forma horizontal*/
+} 
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 101; /*para que esté sobre el header*/
+    cursor: pointer; /*para que aparezca la manita cuando ponemos el mouse ancima*/
+}
+
+#menu-toggle{
+    display: none; /*nunca quiero que se vea el check-box*/
+}
+.menu-icon-action{
+    display: none; /*para que no se le pueda hacer click*/
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, rgb(80, 4, 80) 0%, #800080 25%, rgb(23, 0, 23) 75%); /*fondo de color gradiente*/
+    position: relative; /*para que sea relativo al contenedor (nos permite usar top, bottom, left y right)*/
+    display: grid; /*para que el hero se pueda dividir en dos columnas*/
+    grid-template-columns: 1fr 1fr; /*crear las 2 columnas*/
+    align-items: center; /*para alinear verticalmente el hero*/
+    gap: 2rem; /*haya espacio de 2 rem entre las dos columnas*/
+}
+
+section{
+    padding: 0 8%;
+}
+
+.hero-text h1{
+    font-family: "Comfortaa", sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    margin: 15px 0 30px;
+}
+
+.hero-text h5{
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.hero-text h4{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.hero-text p{
+    font-size: 70%;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img img{
+    width: 300px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    transition: all 4s linear; /*esto hace que la transición sea linal*/
+}
+
+.hero-img img:hover{
+    width: 330px;
+    opacity: 0.6;
+}
+
+.hero-text a{
+    display: inline-block;
+    background-color: rgba(106, 23, 106, 0.736);
+    border: 1px solid transparent;
+    padding: 10px 25px;
+    margin-right: 10px;
+    line-height: 1.4;
+    font-size: 12px;
+    font-weight: 450;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px)
+}
+
+.hero-text a.proyectos{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-left: 5px;
+}
